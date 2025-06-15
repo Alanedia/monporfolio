@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio Personnel</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">DIARRASSOUBA Chaliau Ronald Alane</div>
+        <ul class="nav-links">
+          <li><a onclick="showSection('accueil')">Accueil</a></li>
+          <li><a onclick="showSection('apropos')">À propos</a></li>
+          <li><a onclick="showSection('competences')">Compétences</a></li>
+          <li><a onclick="showSection('projets')">Projets</a></li>
+          <li><a onclick="showSection('hobbies')">Hobbies</a></li>
+          <li><a onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="accueil" class="section active">
+      <div class="hero">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Développeur Web Passionné</p>
+        <button class="cta-button" onclick="showSection('apropos')">
+          Découvrir mon parcours
+        </button>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <h3>🎯 Objectif</h3>
+          <p class="justify">
+            Concevoir des expériences numériques intuitives, performantes et
+            accessibles, centrées sur les besoins des utilisateurs.
+          </p>
+        </div>
+        <div class="card">
+          <h3>💡 Innovation</h3>
+          <p class="justify">
+            Évoluer continuellement à travers la veille technologique et
+            l’adoption des meilleures pratiques du développement front-end et
+            back-end.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🤝 Collaboration</h3>
+          <p class="justify">
+            Collaborer avec des équipes pluridisciplinaires pour transformer des
+            idées en produits digitaux efficaces et évolutifs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section">
+      <h2>À propos</h2>
+      <div class="cards-container">
+        <img src="profil.jpeg" alt="Photo de profil" class="about-image" />
+        <div class="card">
+          <h3>Mon parcours</h3>
+          <p class="justify">
+            Je m’appelle Chaliau Ronald Alane DIARRASSOUBA, développeur web
+            Fullstack en devenir, passionné par la création de sites modernes,
+            interactifs et accessibles. Actuellement en formation dans le cadre
+            du programme "D-CLIC - Formez-vous au numérique", je me spécialise
+            dans le développement web avec des compétences solides en HTML, CSS,
+            JavaScript et une initiation aux technologies back-end.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mes valeurs</h3>
+          <ul>
+            <li>
+              <strong>Excellence :</strong> Je vise toujours la qualité dans
+              chaque ligne de code.
+            </li>
+            <li>
+              <strong>Créativité :</strong> J'aime apporter des solutions
+              originales aux problèmes.
+            </li>
+            <li>
+              <strong>Apprentissage :</strong> Je reste curieux et ouvert aux
+              nouvelles technologies.
+            </li>
+            <li>
+              <strong>Collaboration :</strong> Je crois en la force du travail
+              d'équipe.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section">
+      <h2>Mes Compétences</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Langages de Programmation</h3>
+          <div class="competence-item">
+            <div class="competence-name">
+              <span>HTML5</span><span>85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="competence-item">
+            <div class="competence-name"><span>CSS3</span><span>80%</span></div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="competence-item">
+            <div class="competence-name">
+              <span>JavaScript</span><span>75%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="75"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Outils & Technologies</h3>
+          <div class="competence-item">
+            <div class="competence-name">
+              <span>GitHub</span><span>70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="70"></div>
+            </div>
+          </div>
+          <div class="competence-item">
+            <div class="competence-name">
+              <span>Responsive Design</span><span>80%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="competence-item">
+            <div class="competence-name">
+              <span>Visual Studio Code</span><span>85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <h2>Mes Projets</h2>
+      <div class="projet-card">
+        <div class="projet-image">🎨</div>
+        <div class="projet-content">
+          <h3>Portfolio Créatif</h3>
+          <p class="justify">
+            Ce portfolio illustre mon savoir-faire : il a été développé en
+            adoptant une approche mobile-first, avec des animations CSS légères
+            et une navigation optimisée pour l’expérience utilisateur.
+          </p>
+          <div class="projet-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Animations</span>
+            <span class="tech-tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="section">
+      <h2>Mes Hobbies & Activités</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>📚 Apprentissage</h3>
+          <p class="justify">
+            <strong>Lecture :</strong> Je lis constamment des articles sur les
+            nouvelles technologies.
+          </p>
+          <p class="justify">
+            <strong>Cours en ligne :</strong> Toujours en train de suivre des
+            formations pour améliorer mes compétences.
+          </p>
+          <p class="justify">
+            <strong>Veille technologique :</strong> suivi des tendances numériques et innovations.
+          </p>
+          <p class="justify">
+            <strong>Langues étrangères :</strong> apprentissage en autonomie (ex. : anglais, espagnol).
+          </p>
+          <p class="justify">
+            <strong>Cours en ligne (MOOC) :</strong>  suivi régulier de formations (Coursera, OpenClassrooms, etc.).
+          </p>
+        </div>
+        <div class="card">
+          <h3>🎮 Créativité</h3>
+          <p class="justify">
+            <strong>Jeux vidéo :</strong> Passionné de gaming, j'apprécie
+            particulièrement les jeux stratégiques.
+          </p>
+          <p class="justify">
+            <strong>Photographie :</strong> La photographie m’aide à affiner mon sens du détail. J’aime capturer des paysages et 
+            jouer avec la lumière, une pratique qui enrichit aussi ma sensibilité visuelle en design.
+          </p>
+          <p class="justify">
+            <strong>Cuisine :</strong> ma Passion pour la cuisine maison et l'exploration de recettes, développe ma créativité, 
+            ma rigueur et mon sens du détail.
+          </p>
+          <p class="justify">
+            <strong>Design :</strong> Je m’intéresse au design d’interface et
+            j’expérimente régulièrement avec divers outils.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>N'hésitez pas à me contacter pour toute éventuelle collaboration</h2>
+      <div class="form-container">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="sujet">Sujet *</label>
+            <input type="text" id="sujet" name="sujet" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">Designed by Alane with HTML CSS JS</div>
+        <div class="footer-right">Tous droits réservés -2025-</div>
+      </div>
+    </footer>
+    <script src="Scripts.js"></script>
+  </body>
+</html>
