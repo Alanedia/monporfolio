@@ -19,10 +19,12 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-bg);
+    overflow-x: hidden; /* Supprime le débordement horizontal */
 }
 
 .justify {
     text-align: justify;
+    line-height: 1.6;
 }
 
 nav {
@@ -49,14 +51,16 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .about-image {
-    width: 250px; 
+    width: 250px;
     height: 250px;
-    border-radius: 50%; 
-    overflow: hidden; 
-    margin: 20px auto; 
-    display: block; 
-  }
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    display: block;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -84,6 +88,7 @@ nav {
 .section.active {
     display: block;
 }
+
 .section h2 {
     color: var(--primary-color);
     margin-bottom: 2rem;
@@ -204,6 +209,7 @@ nav {
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .tech-tag {
@@ -283,20 +289,59 @@ nav {
     }
 }
 
+/* ✅ VERSION RESPONSIVE POUR MOBILE */
 @media (max-width: 768px) {
-    .nav-links {
+    nav .nav-links {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .section {
+        padding: 80px 1rem 40px;
     }
 
     .cards-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 95%;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
 }
+
 footer {
     background: var(--primary-color);
     color: var(--white);
@@ -309,16 +354,16 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 .footer-left {
-    text-align: left; 
+    text-align: left;
 }
 
 .footer-right {
-    text-align: right; 
+    text-align: right;
 }
