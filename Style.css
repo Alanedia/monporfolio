@@ -37,13 +37,9 @@ nav {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
+  }
 
 .logo {
     color: var(--white);
@@ -59,7 +55,7 @@ nav {
     display: block; 
   }
 
-.burger {
+  .burger {
     display: none;
     font-size: 2rem;
     color: var(--white);
@@ -71,19 +67,19 @@ nav {
       display: block;
     }
   
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-      background-color: var(--primary-color);
-      padding: 1rem;
-      width: 100%;
-    }
   
-    .nav-links.active {
-      display: flex;
-    }
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 999;
+        animation: slideDown 0.3s ease forwards;
+      }
 
 .nav-links a {
     color: var(--white);
@@ -91,7 +87,10 @@ nav {
     transition: color 0.3s ease;
     cursor: pointer;
 }
-
+.nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
 .nav-links a:hover {
     color: var(--secondary-color);
 }
@@ -103,9 +102,9 @@ nav {
     margin: 0 auto;
 }
 
-.section.active {
-    display: block;
-}
+.nav-links.active {
+    display: flex;
+  }
 .section h2 {
     color: var(--primary-color);
     margin-bottom: 2rem;
@@ -294,16 +293,16 @@ nav {
     background: var(--primary-color);
 }
 
-@keyframes fadeInUp {
+@keyframes slideDown {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+      opacity: 0;
+      transform: translateY(-20px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 
   
     .cards-container {
